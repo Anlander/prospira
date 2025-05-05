@@ -1,5 +1,4 @@
 import { LinkTypes } from "@/types/IfLinkInterface";
-import { Button } from "../ui/button";
 import Link from "next/link";
 
 export const CTA = ({ blok }: any) => {
@@ -26,6 +25,7 @@ export const CTA = ({ blok }: any) => {
               <button
                 key={item._uid}
                 className={`${item.secondary_color ? "secondary-button" : "primary-button"}`}
+                style={{ color: "#fff" }}
               >
                 <Link href={item.link.cached_url}  >{item.title}</Link>
               </button>

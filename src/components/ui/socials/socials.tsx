@@ -7,6 +7,7 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa6";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 export const Socials = ({ props, color }: any) => {
   return (
@@ -22,6 +23,8 @@ export const Socials = ({ props, color }: any) => {
               return <FaLinkedin fontSize={size.size} color={color.color} />;
             case "yt":
               return <FaYoutube fontSize={size.size} color={color.color} />;
+            case "email":
+              return <MdOutlineMailOutline fontSize={size.size} color={color.color} />;
             default:
               "";
           }

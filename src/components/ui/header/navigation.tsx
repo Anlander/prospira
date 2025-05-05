@@ -45,7 +45,7 @@ export const Navigation = ({ props }: HeaderProps) => {
   const path = usePathname();
   return (
     <nav
-      className={`fixed w-full items-center ${isScrolled && "bg-[#597078]"} flex justify-between top-0 px-5 transition-all duration-300 ${isScrolled ? "lg:py-4" : "lg:px-14"} py-8 z-30`}
+      className={`fixed w-full items-center ${isScrolled && "bg-[#bccece]"} flex justify-between top-0 px-5 transition-all duration-300 ${isScrolled ? "lg:py-4" : "lg:px-14"} py-8 z-30`}
     >
       <Link href="/">
         <Image
@@ -70,7 +70,7 @@ export const Navigation = ({ props }: HeaderProps) => {
                       ? props.header_text_color.color
                       : item.bg_active
                         ? ""
-                        : props.header_text_color.color,
+                        : props.header_text_color.color ? isScrolled ? "#000" : props.header_text_color.color : "#fff",
                 }}
 
                 className={`${router.slug === item.link.cached_url && "active"
@@ -102,7 +102,7 @@ export const Navigation = ({ props }: HeaderProps) => {
           </Link>
         ))}
       </div>
-      <Link href="/kontakt" className="hidden primary-button lg:flex items-center gap-2" style={{ color: "#fff" }}><IoMailOutline /> Boka tid</Link>
+      <Link href="/kontakt" className="hidden primary-button lg:flex items-center gap-2" style={{ color: "#fff" }}><IoMailOutline />Kontakt</Link>
     </nav>
   );
 };
