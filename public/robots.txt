@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://byggsakert.se/
+
+# Sitemaps
+Sitemap: https://byggsakert.se/sitemap.xml

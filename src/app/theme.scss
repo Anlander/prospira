@@ -1,0 +1,93 @@
+$primary: #214e44;
+$primary-text: #000;
+$primary-hover: #c3ccbe;
+$forground: #f8f8f8;
+
+$secondary: #597078;
+$secondary-text: #fff;
+$secondary-hover: #c3ccbe;
+
+$h1: 52px;
+$h1-mobile: 40px;
+$h2: 45px;
+$h2-mobile: 30px;
+$h3: 22px;
+$h3-mobile: 20px;
+$p: 16px;
+
+h1 {
+  font-size: $h1;
+  line-height: normal;
+
+  @media screen and (max-width: 1024px) {
+    font-size: $h1-mobile;
+  }
+}
+
+h2 {
+  font-size: $h2;
+  line-height: 3.2rem;
+
+  @media screen and (max-width: 1024px) {
+    font-size: $h2-mobile;
+  }
+}
+
+h3 {
+  font-size: $h3;
+
+  @media screen and (max-width: 1024px) {
+    font-size: $h3-mobile;
+  }
+}
+
+p,
+span {
+  font-size: $p;
+}
+
+a {
+  font-size: 16px;
+}
+
+// Buttons
+
+.primary-button {
+  background: $primary;
+  color: $primary-text;
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+
+  &:hover {
+    background: $primary-hover;
+    color: $primary-text !important;
+  }
+}
+
+.secondary-button {
+  background: $secondary;
+  color: $secondary-text;
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+
+  &:hover {
+    background: $secondary-hover;
+    color: $secondary;
+  }
+}
+
+.active {
+  background: $primary;
+  color: white;
+  border-radius: 29px;
+}
+
+.table-head {
+  background: $forground;
+}
+
+.social-links:hover svg {
+  // color: #f15a39 !important;
+}
