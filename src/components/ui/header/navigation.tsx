@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Hamburger from "hamburger-react";
-import { useParams, usePathname } from "next/navigation";
+import { useParams } from "next/navigation";
 import { IoMailOutline } from "react-icons/io5";
 
 interface HeaderProps {
@@ -42,19 +42,28 @@ export const Navigation = ({ props }: HeaderProps) => {
   }
 
   const router = useParams();
-  const path = usePathname();
   return (
     <nav
       className={`fixed w-full items-center ${isScrolled && "bg-[#bccece]"} flex justify-between top-0 px-5 transition-all duration-300 ${isScrolled ? "lg:py-4" : "lg:px-14"} py-8 z-30`}
     >
       <Link href="/">
-        <Image
-          src={props.logo.filename}
-          alt={props.site_title}
-          width={isScrolled ? 120 : 250}
-          height={50}
-          className="z-50"
-        />
+        {isScrolled ?
+          <Image
+            src={"/logo.png"}
+            alt={props.site_title}
+            width={120}
+            height={50}
+            className="z-50"
+          />
+          :
+          <Image
+            src={props.logo.filename}
+            alt={props.site_title}
+            width={isScrolled ? 120 : 250}
+            height={50}
+            className="z-50"
+          />
+        }
       </Link>
 
       <div className={`hidden lg:flex`}>
@@ -65,13 +74,16 @@ export const Navigation = ({ props }: HeaderProps) => {
                 key={item._uid}
                 href={item.link.cached_url}
                 style={{
-                  color:
-                    path === `/${item.link.cached_url}`
-                      ? props.header_text_color.color
-                      : item.bg_active
-                        ? ""
-                        : props.header_text_color.color ? isScrolled ? "#000" : props.header_text_color.color : "#fff",
+                  color: `${isScrolled ? "#000" : props.header_text_color.color}`,
                 }}
+                //style={{
+                //  color:
+                //    path === `/${item.link.cached_url}` && !isScrolled
+                //      ? props.header_text_color.color
+                //      : item.bg_active
+                //        ? ""
+                //        : props.header_text_color.color,
+                //}}
 
                 className={`${router.slug === item.link.cached_url && "active"
                   } uppercase  px-5 py-2 flex gap-2 items-center ${item.secondary_color && "primary-button"} ${item.bg_active ? "button-hover" : props.header_text_color.color}`}

@@ -125,9 +125,9 @@ export function ContactForm({ settings }: any) {
             )}
           />
 
-          <Button type="submit" className="w-[40%] lg:w-[20%] mx-auto">
+          <button type="submit" className="secondary-button text-white w-[40%] lg:w-[20%] mx-auto">
             Skicka
-          </Button>
+          </button>
         </form>
       </Form>
     </div>
