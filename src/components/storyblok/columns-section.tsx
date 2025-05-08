@@ -19,12 +19,12 @@ export const Columns = ({ blok }: any) => {
         >
           {blok.fields.map((item: any) => (
             <div
-              className={`flex flex-col gap-2  ${blok?.text_center && "text-center "
+              className={`flex flex-col gap-2 text-white  ${blok?.text_center && "text-center "
                 }`}
               key={item._uid}
             >
               {item.title_karla_font && (
-                <h2 className="text-[20px] uppercase mb-8 ">
+                <h2 style={{ color: "#fff" }} className="text-[20px] uppercase mb-8 text-white">
                   {item.title_karla_font}
                 </h2>
               )}
@@ -32,7 +32,7 @@ export const Columns = ({ blok }: any) => {
               {item.title && (
                 <h2
                   className={`${item.title_karla_font
-                    ? "text-[30px] lg:text-[40px] mb-5 "
+                    ? "text-[30px] lg:text-[40px] mb-5 text-white"
                     : "text-[20px] uppercase"
                     }`}
                 >

@@ -74,17 +74,8 @@ export const Navigation = ({ props }: HeaderProps) => {
                 key={item._uid}
                 href={item.link.cached_url}
                 style={{
-                  color: `${isScrolled ? "#000" : props.header_text_color.color}`,
+                  color: `${isScrolled && router.slug !== item.link.cached_url ? "#000" : props.header_text_color.color}`,
                 }}
-                //style={{
-                //  color:
-                //    path === `/${item.link.cached_url}` && !isScrolled
-                //      ? props.header_text_color.color
-                //      : item.bg_active
-                //        ? ""
-                //        : props.header_text_color.color,
-                //}}
-
                 className={`${router.slug === item.link.cached_url && "active"
                   } uppercase  px-5 py-2 flex gap-2 items-center ${item.secondary_color && "primary-button"} ${item.bg_active ? "button-hover" : props.header_text_color.color}`}
 

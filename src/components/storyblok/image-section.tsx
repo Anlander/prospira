@@ -16,15 +16,15 @@ export const ImageSection = ({ blok }: any) => {
         className={`container-section  ${blok.bg_color?.color && "px-0 pt-5 lg:p-14"}`}
         style={{ background: `${blok.bg_color?.color || ""}` }}
       >
-        <div className="lg:h-[500px] grid gap-14 grid-cols-1 lg:grid-cols-2">
+        <div className="lg:h-[550px] grid gap-14 grid-cols-1 lg:grid-cols-2">
           <div
-            className={`w-full h-[350px] lg:h-full relative ${blok.image_right && "order-1"}`}
+            className={`w-full h-[550px] lg:h-full relative ${blok.image_right && "order-1"}`}
           >
             <Image
               src={blok.image.filename || ""}
               alt={blok.title}
               fill
-              className={`object-cover ${blok.image_right ? "p-0 lg:p-10 pr-0" : "p-0 lg:p-10 pl-0"}`}
+              className={`object-cover  ${blok.image_right ? "p-0 lg:p-10 pr-0" : "p-0 lg:p-10 pl-0"}`}
             />
           </div>
           <div
