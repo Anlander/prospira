@@ -11,7 +11,7 @@ export const CTA = ({ blok }: any) => {
         />
       )}
       <div
-        className={`py-44 w-full h-full flex justify-center items-center z-10 gap-5`}
+        className={`py-24 lg:py-44 w-full h-full flex justify-center items-center z-10 gap-5`}
         style={{
           color: `${blok.text_color.color ? blok.text_color.color : "primary"
             }`,

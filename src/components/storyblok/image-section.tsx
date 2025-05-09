@@ -16,9 +16,9 @@ export const ImageSection = ({ blok }: any) => {
         className={`container-section  ${blok.bg_color?.color && "px-0 pt-5 lg:p-14"}`}
         style={{ background: `${blok.bg_color?.color || ""}` }}
       >
-        <div className="lg:h-[550px] grid gap-14 grid-cols-1 lg:grid-cols-2">
+        <div className="lg:h-[550px] grid gap-14 grid-cols-1 py-10 lg:py-0 lg:grid-cols-2">
           <div
-            className={`w-full h-[550px] lg:h-full relative ${blok.image_right && "order-1"}`}
+            className={`w-full h-[300px] lg:h-[550px] relative ${blok.image_right && "order-1"}`}
           >
             <Image
               src={blok.image.filename || ""}

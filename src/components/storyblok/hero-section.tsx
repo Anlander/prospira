@@ -41,7 +41,7 @@ export const HeroSection = ({ blok }: HeroProps) => {
           ? "h-full"
           : blok.small_hero
             ? "h-[50vh] lg:min-h-[55vh]"
-            : "h-[80vh] lg:min-h-[90vh]"
+            : "h-[60vh] lg:min-h-[90vh]"
           } justify-center flex items-center  ${blok.frame && "container-section mt-20"
           }`}
       >
@@ -51,7 +51,7 @@ export const HeroSection = ({ blok }: HeroProps) => {
         />
 
         {blok.logo_image.filename && (
-          <Image className="z-10 absolute right-10 -bottom-14 w-[200px] lg:w-auto flex justify-center" src={blok.logo_image.filename} width={300} height={50} alt="" />
+          <Image className="z-10 object-cover absolute right-10 -bottom-14 w-[200px] lg:w-auto flex justify-center" src={blok.logo_image.filename} width={300} height={50} alt="" />
         )}
         <div
           className="z-20 absolute flex flex-col gap-8 container-section mx-auto"

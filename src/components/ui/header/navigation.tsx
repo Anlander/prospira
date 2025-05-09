@@ -61,7 +61,7 @@ export const Navigation = ({ props }: HeaderProps) => {
             alt={props.site_title}
             width={isScrolled ? 120 : 250}
             height={50}
-            className="z-50"
+            className="z-50 w-[180px] lg:w-auto"
           />
         }
       </Link>
@@ -91,14 +91,22 @@ export const Navigation = ({ props }: HeaderProps) => {
         <Hamburger toggled={open} toggle={setMenuOpen} color="white" />
       </div>
       <div
-        className={`gap-2 bg-[#214e44] fixed top-0 h-full w-full lg:mt-20 px-10 py-14 left-0 flex-col flex text-[32px] z-20 transition-all duration-300 right-0 ${!open ? "translate-x-full" : "translate-x-0"
+        className={`gap-2 bg-[#214e44] fixed top-0 h-full w-full lg:mt-20 px-10 py-10 left-0 flex-col flex text-[32px] z-20 transition-all duration-300 right-0 ${!open ? "translate-x-full" : "translate-x-0"
           }`}
       >
+
+        <Image
+          src={props.logo.filename}
+          alt={props.site_title}
+          width={150}
+          height={50}
+          className="mb-6 z-50"
+        />
         {props.meny.map((item: LinkTypes) => (
           <Link
             onClick={handleOpenMenu}
             key={item._uid}
-            href={item.link.url}
+            href={item.link.cached_url}
             style={{ color: props.header_text_color.color }}
           >
             {item.title}
