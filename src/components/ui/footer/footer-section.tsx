@@ -13,6 +13,8 @@ export const FooterSection = ({ props }: any) => {
           <Socials props={props.fields} color={props.header_text_color} />
         </div>
       </div>
+      <p className="text-center">Prospiro AB <br />
+        orgnr: 559522-4964</p>
       <p>Copyrights Prospiro 2025 ©</p>
     </footer>
   );
