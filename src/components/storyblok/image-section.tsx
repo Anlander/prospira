@@ -38,6 +38,7 @@ export const ImageSection = ({ blok }: any) => {
               {blok.buttons.map((item: LinkTypes) => (
                 <Button
                   key={item._uid}
+                  style={{ color: "white" }}
                   variant={`${item.secondary_color ? "secondary" : "default"}`}
                 >
                   <Link className="button" href={item.link.cached_url}>
