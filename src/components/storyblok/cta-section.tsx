@@ -11,16 +11,17 @@ export const CTA = ({ blok }: any) => {
         />
       )}
       <div
-        className={`py-24 lg:py-44 w-full h-full flex justify-center items-center z-10 gap-5`}
+        className={`py-24 lg:py-32 w-full h-full flex justify-center items-center z-10 gap-5`}
         style={{
           color: `${blok.text_color.color ? blok.text_color.color : "primary"
             }`,
         }}
       >
         <div className="flex flex-col gap-5 text-center lg:max-w-[40%]">
+          <h3 className="uppercase">{blok.top_title}</h3>
           <h2 className="leading-[64px]">{blok.sub_title}</h2>
           <p>{blok.title}</p>
-          <div className="pt-4">
+          <div className="pt-4 flex gap-2 justify-center items-center">
             {blok.buttons.map((item: LinkTypes) => (
               <button
                 key={item._uid}
