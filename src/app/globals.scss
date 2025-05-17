@@ -103,6 +103,10 @@ span {
 .render-content {
   p {
     font-size: 18px;
+
+    span {
+      color: white !important;
+    }
   }
 }
 

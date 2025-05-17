@@ -40,7 +40,7 @@ export const Columns = ({ blok }: any) => {
                 </h2>
               )}
               <span
-                className={`flex flex-col gap-5 text-white ${blok.half_width && "lg:max-w-[50%]"
+                className={`flex flex-col gap-5 text-white render-content ${blok.half_width && "lg:max-w-[50%]"
                   } ${blok?.text_center && "mx-auto"}`}
               >
                 {render(item.content)}
