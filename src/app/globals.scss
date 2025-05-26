@@ -152,6 +152,17 @@ span {
   }
 }
 
+.render-text {
+
+  ol,
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: circle;
+  }
+}
+
 /* Tabel styling */
 
 .display-left:last-of-type {

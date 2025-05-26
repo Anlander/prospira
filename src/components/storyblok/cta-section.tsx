@@ -1,6 +1,7 @@
 import { LinkTypes } from "@/types/IfLinkInterface";
 import Link from "next/link";
 import Image from 'next/image';
+import { render } from "storyblok-rich-text-react-renderer";
 
 export const CTA = ({ blok }: any) => {
   return (
@@ -23,7 +24,7 @@ export const CTA = ({ blok }: any) => {
             <Image src={blok.logo.filename} className="flex mx-auto items-center justify-center py-4" width={200} height={200} alt="Prospiro" />
           }
           <h2 className="leading-[64px]">{blok.sub_title}</h2>
-          <p>{blok.title}</p>
+          <span className="flex gap-2 flex-col render-text">{render(blok.title)}</span>
           <div className="pt-4 flex gap-2 justify-center items-center">
             {blok.buttons.map((item: LinkTypes) => (
               <button
