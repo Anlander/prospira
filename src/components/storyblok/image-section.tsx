@@ -33,7 +33,7 @@ export const ImageSection = ({ blok }: any) => {
           >
             {blok.sub_title && <h3>{blok.sub_title}</h3>}
             {blok.title && <h2>{blok.title}</h2>}
-            {blok.content && <span className="flex gap-2 flex-col">{render(blok.content)}</span>}
+            {blok.content && <span className="flex gap-2 flex-col render-text">{render(blok.content)}</span>}
             <div>
               {blok.buttons.map((item: LinkTypes) => (
                 <Button
