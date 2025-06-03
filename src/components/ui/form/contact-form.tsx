@@ -23,9 +23,6 @@ const formSchema = z.object({
   mail: z.string().email("Ogiltig e-post"),
   phone: z.string().min(1, "Telefon krävs"),
   message: z.string().min(1, "Meddelande krävs"),
-  type: z.enum(["privat", "foretag", "brf"], {
-    required_error: "Välj typ",
-  }),
 });
 
 export function ContactForm({ settings }: any) {
