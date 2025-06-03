@@ -36,7 +36,6 @@ export function ContactForm({ settings }: any) {
       mail: "",
       phone: "",
       message: "",
-      type: "privat",
     },
   });
 
