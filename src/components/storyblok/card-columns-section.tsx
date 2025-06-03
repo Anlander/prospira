@@ -25,7 +25,7 @@ export const CardColumns = ({ blok }: any) => {
               : "flex flex-col gap-2"
               }  lg:p-0 transition-all duration-300 `}
           >
-            <div className="w-full h-[300px] lg:h-[400px] relative">
+            <div className="w-full h-[300px] lg:h-[500px] relative">
               <Image
                 src={item.image.filename || ""}
                 fill

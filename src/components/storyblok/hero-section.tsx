@@ -27,6 +27,7 @@ interface HeroProps {
     frame: boolean;
     video: boolean;
     small_hero: boolean;
+    medium_hero: boolean;
   };
 }
 
@@ -41,7 +42,8 @@ export const HeroSection = ({ blok }: HeroProps) => {
           ? "h-full"
           : blok.small_hero
             ? "h-[50vh] lg:min-h-[55vh]"
-            : "h-[60vh] lg:min-h-[90vh]"
+            : blok.medium_hero ? "bg-bottom h-[50vh] lg:min-h-[80vh]"
+              : "h-[60vh] lg:min-h-[90vh]"
           } justify-center flex items-center  ${blok.frame && "container-section mt-20"
           }`}
       >
@@ -101,7 +103,7 @@ export const HeroSection = ({ blok }: HeroProps) => {
           </video>
         ) : (
           <Image
-            className="z-0 object-cover"
+            className="z-0 object-cover "
             src={blok.bg_image.filename || ""}
             fill
             alt={blok.title}
