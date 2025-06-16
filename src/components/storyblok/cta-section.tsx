@@ -13,13 +13,13 @@ export const CTA = ({ blok }: any) => {
         />
       )}
       <div
-        className={`py-24 lg:py-32 w-full h-full flex justify-center items-center z-10 gap-5`}
+        className={`py-24 lg:py-24 w-full h-full flex justify-center items-center z-10 gap-5`}
         style={{
           color: `${blok.text_color.color ? blok.text_color.color : "primary"
             }`,
         }}
       >
-        <div className="flex flex-col gap-5 text-center lg:max-w-[40%]">
+        <div className="flex flex-col gap-5 text-center lg:max-w-[60%]">
           {blok.top_logo &&
             <Image src={blok.logo.filename} className="flex mx-auto items-center justify-center py-4" width={200} height={200} alt="Prospiro" />
           }
