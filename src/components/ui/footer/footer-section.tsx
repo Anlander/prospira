@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { Socials } from "../socials/socials";
 
 export const FooterSection = ({ props }: any) => {
@@ -14,7 +15,12 @@ export const FooterSection = ({ props }: any) => {
         </div>
       </div>
       <p className="text-center">Prospiro AB <br />
+
+        <br />
+        <Link href={`mailto:${props.mail}`}>{props.mail}</Link>
+        <br />
         070-536 665 50
+        <br />
         <br />
         orgnr: 559522-4964
       </p>
